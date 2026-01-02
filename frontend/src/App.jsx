@@ -8,7 +8,7 @@ function App() {
   const [toast, setToast] = useState(null); // { message, type }
 
   const fetchContacts = async () => {
-    const res = await fetch("http://localhost:5000/api/contacts");
+    const res = await fetch("https://contactmanagement-inky.vercel.app/api/contacts");
     const data = await res.json();
     setContacts(data);
   };

@@ -3,7 +3,7 @@ import React from "react";
 function ContactList({ contacts = [], onRefresh }) {
   const deleteContact = async (id) => {
     if (window.confirm("Are you sure you want to delete this contact?")) {
-      await fetch(`http://localhost:5000/api/contacts/${id}`, {
+      await fetch(`https://contactmanagement-inky.vercel.app/api/contacts/${id}`, {
         method: "DELETE",
       });
       onRefresh();
